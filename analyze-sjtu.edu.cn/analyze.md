@@ -1,5 +1,6 @@
 # ANAYLZE OF SJTU HOMEPAGE
 ## PERFORMANCE
+
 ![performance](https://github.com/zsh99/sjtu-grade2/blob/master/analyze-sjtu.edu.cn/images/1.png?raw=true)
 
 overview窗格包含以下3个图表：
@@ -28,5 +29,13 @@ Painting：媒体文件的加载。
 
 Othering： 其他资源的加载。
 
+idle： 闲置时间
+
 我们可以看到script和rendering两个板块消耗是最大，主要是因为交大主页存在非常多的动画以及首屏的轮播盘，这些动画都需要进行redering。页面中的所有数据均是在document加载完成后通过ajax访问后端得到数据，再动态加载到页面中的，以及部分动画用js实现。
+
+### call tree
+![performance](https://github.com/zsh99/sjtu-grade2/blob/master/analyze-sjtu.edu.cn/images/2.png?raw=true)
+![performance](https://github.com/zsh99/sjtu-grade2/blob/master/analyze-sjtu.edu.cn/images/3.png?raw=true)
+
+最大花销的是这个开发者自己所写的一个初始化函数
 
