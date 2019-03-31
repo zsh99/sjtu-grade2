@@ -39,7 +39,19 @@ idle： 闲置时间
 
 最大花销的是这个开发者自己所写的一个初始化函数
 
-##SOURCES
+## SOURCES
+
 ![sources](https://github.com/zsh99/sjtu-grade2/blob/master/analyze-sjtu.edu.cn/images/4.png?raw=true)
 
 该网页未使用前端框架。
+
+## NETWORK
+![SJTU](https://github.com/zsh99/sjtu-grade2/blob/master/analyze-sjtu.edu.cn/images/5.png?raw=true)
+
+这是交大主页的network
+
+![taobao](https://github.com/zsh99/sjtu-grade2/blob/master/analyze-sjtu.edu.cn/images/6.png?raw=true)
+
+这是淘宝主页的network
+
+交大主页并行下载远低于淘宝主页
