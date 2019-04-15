@@ -35,5 +35,26 @@ public class wordladder {
         new ladder();
         return ladder.ladder(source, target);
     }
+    @RequestMapping(value = "/login")
+    public String login() {
+        return " <body>\n" +
+                "<h1>Login page</h1>\n" +
+                "<p>Example user: user / password</p>\n" +
+                "<form action=\"/login\" method=\"post\">\n" +
+                "    <label for=\"username\">Username</label>:\n" +
+                "    <input type=\"text\" id=\"username\" name=\"username\" autofocus=\"autofocus\" /> <br />\n" +
+                "    <label for=\"password\">Password</label>:\n" +
+                "    <input type=\"password\" id=\"password\" name=\"password\" /> <br />\n" +
+                "    <input type=\"submit\" value=\"Log in\" />\n" +
+                "</form>\n" +
+                "<p><a href=\"/\">Back to home page</a></p>\n" +
+                "</body>";
+    }
 
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    public ModelAndView hasLogin() {
+        ModelAndView model = new ModelAndView();
+        model.setViewName("/");
+        return model;
+    }
 }
